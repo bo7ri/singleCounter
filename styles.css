@@ -1,0 +1,151 @@
+/* Variables */
+:root {
+    --primary-color: #4A90E2;
+    --text-color: #333;
+    --bg-color: #f3f4f6;
+    --white-color: #fff;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  #machine-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .machine {
+    width: calc(33% - 20px);
+    background: var(--white-color);
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .machine:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .machine-label, .timer, .end-time {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  .patient-name, input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover, button:focus {
+    background-color: #14599e;
+  }
+  
+ /* Tablet */
+@media only screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .machine {
+      width: calc(50% - 20px);
+      padding: 20px;
+    }
+  
+    button, input {
+      font-size: 18px;
+      padding: 12px 20px;
+    }
+  
+    .timer, .machine-label, .end-time {
+      font-size: 28px;
+    }
+  
+    .patient-name {
+      font-size: 18px;
+      padding: 12px;
+    }
+  }
+  
+  /* Mobile */
+  @media only screen and (max-width: 480px) {
+    .machine {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 25px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+  
+    input[type="number"], .patient-name {
+      width: 100%;
+      padding: 12px;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .machine-label, .timer, .end-time {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+  }
+  
